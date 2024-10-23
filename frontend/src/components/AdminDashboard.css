@@ -1,0 +1,155 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Ensures it takes the full width */
+  }
+  
+  .admin-dashboard {
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #e6e6fa, #d8b9e6, #4a2c6d); /* Lavender with a touch of blue */
+    min-height: 100vh; /* Ensures the background covers the entire viewport height */
+  }
+  
+  .h2 {
+    color: black;
+    font-size: 2.5em; /* Increased font size for prominence */
+    margin-bottom: 20px; /* Added margin for spacing */
+    text-align: center; /* Center the heading */
+    font-family: 'Arial', sans-serif; /* More modern font */
+  }
+  
+  .user-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Flexibly sized cards */
+    gap: 20px; /* Space between cards */
+    margin: 20px; /* Margin around the grid */
+  }
+  
+  .user-card {
+    background-color: #ffffff; /* Card background */
+    padding: 20px;
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
+    position: relative; /* Positioning context for pseudo-elements */
+  }
+  
+  .user-card:hover {
+    transform: translateY(-4px); /* Slight lift on hover */
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+  }
+  
+  .user-name {
+    font-size: 1.6em; /* Increased font size for names */
+    color: #333; /* Darker color for better readability */
+    margin: 10px 0; /* Margin for spacing */
+  }
+  
+  .social-media-handle {
+    font-size: 1.2em; /* Slightly smaller font size */
+    color: #555; /* Medium grey for social media handles */
+    margin: 8px 0; /* Margin for spacing */
+  }
+  .total-images{
+    font-size: 1.2em; /* Slightly smaller font size */
+    color: #555; /* Medium grey for social media handles */
+    margin: 8px 0;
+  }
+  .image-carousel {
+    border-radius: 8px; /* Rounded corners for carousel */
+    overflow: hidden; /* Ensure images stay within rounded corners */
+    margin-top: 15px; /* Space between text and carousel */
+  }
+  
+  .carousel .control-arrow {
+    background-color: rgba(255, 255, 255, 0.8); /* Light background for arrows */
+    border-radius: 50%; /* Circular buttons */
+    height: 30px; /* Height of the arrow buttons */
+    width: 30px; /* Width of the arrow buttons */
+  }
+/*  .carousel .control-dots {
+    position: absolute; 
+    bottom: 10px; 
+    left: 50%; 
+    transform: translateX(-50%);
+    z-index: 10; 
+  } */
+  .carousel .control-arrow:hover {
+    background-color: rgba(255, 255, 255, 1); /* Change on hover */
+  }
+  /* .carousel .control-dots .dot {
+    background-color: rgba(0, 0, 0, 0.5); 
+    border-radius: 50%; 
+    height: 10px;
+    width: 10px; 
+    margin: 0 5px; 
+    transition: background-color 0.3s; 
+  }
+  
+  .carousel .control-dots .dot.selected {
+    background-color: #3498db; 
+  }
+  
+  .carousel .control-dots .dot:hover {
+    background-color: #2980b9; 
+  } */
+  
+  .carousel-image {
+    width: 100%;
+    height: 200px; /* Fixed height for images */
+    object-fit: cover; /* Maintain aspect ratio */
+    transition: transform 0.3s; /* Smooth transition for scaling */
+  }
+  
+  .carousel-image:hover {
+    transform: scale(1.05); /* Slight scale effect on hover */
+  }
+  .carousel-arrow {
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    border: none; /* No border */
+    color: #333; /* Arrow color */
+    font-size: 24px; /* Arrow size */
+    cursor: pointer; /* Pointer cursor on hover */
+    position: absolute; /* Position absolute to place it correctly */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust to center */
+    z-index: 1; /* Ensure arrows are above the carousel images */
+    padding: 10px; /* Add some padding */
+    border-radius: 50%; /* Round background */
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s; /* Smooth background and transform transition */
+  }
+  
+  .carousel-arrow:hover {
+    background: rgba(255, 255, 255, 1); /* Full white background on hover */
+    transform: translateY(-50%) scale(1.1); /* Slightly scale up on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+  }
+  
+  .left-arrow {
+    left: 5px; /* Position to the left */
+  }
+  
+  .right-arrow {
+    right: 5px; /* Position to the right */
+  }
+  
+  
+  
+  /* Add a responsive design for smaller screens */
+  @media (max-width: 768px) {
+    .user-card {
+      padding: 16px; /* Adjust padding for smaller screens */
+    }
+  
+    .user-name {
+      font-size: 1.5em; /* Slightly smaller font size on mobile */
+    }
+  
+    .h2 {
+      font-size: 2em; /* Smaller heading on mobile */
+    }
+  }
+  
